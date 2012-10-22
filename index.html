@@ -1,0 +1,61 @@
+---
+layout: master
+title: Home
+---
+<div id="content">
+    {% for post in paginator.posts %}
+        <div class="postHome">
+            <div class="categories">
+                <a href="#">dev web</a>,
+                <a href="#">git</a>,
+                <a href="#">java</a>
+            </div>
+            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="postInfo">
+                <div class="comments"><a href="">X comments</a></div>
+                <span class="homeDate">{{ post.date | date: "%d %B %Y, %H:%M:%S" }}</span>
+            </div>
+            <div class='contentHome'>
+                {{ post.content | truncatehtml: 450 }}
+            </div>
+            <span class="more">
+                <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+            </span>
+        </div>
+    {% endfor %}
+    
+    <!-- Pagination links -->
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <span class="previous_page">
+                {% if paginator.previous_page == 1 %}
+                    <a href="{{ site.baseurl }}/">← Previous</a>
+                {% else %}
+                    <a href="{{ site.baseurl }}/page{{paginator.previous_page}}">← Previous</a>
+                {% endif %}
+            </span>
+        {% else %}
+            <span class="previous_page disabled">← Previous</span>
+        {% endif %}
+
+        {% if paginator.page == 1 %}
+            <em class="current">1</em>
+        {% else %}
+            <a href="{{ site.baseurl }}/">1</a>
+        {% endif %}
+
+        {% for count in (2..paginator.total_pages) %}
+            {% if count == paginator.page %}
+                <em class="current">{{ count }}</em>
+            {% else %}
+                <a href="{{ site.baseurl }}/page{{count}}">{{ count }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <a class="next_page" href="{{ site.baseurl }}/page{{paginator.next_page}}">Next →</a>
+        {% else %}
+            <span class="next_page disabled">Next →</span>
+        {% endif %}
+    </div>
+</div>
