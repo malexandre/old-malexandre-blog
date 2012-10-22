@@ -1,6 +1,7 @@
 body
 {
-    background: whitesmoke;
+    background: #222222;
+    width: 1000px;
     margin: auto;
     font-family: Verdana, helvetica, arial, clean, sans-serif;
 }
@@ -70,18 +71,9 @@ body
 }
 
 /* General */
-#wrapper
-{
-    background: url(/blog/img/bk_main_wrapper.png) repeat scroll 0 0 transparent;
-    margin: 30px auto 0;
-    overflow: hidden;
-    width: 1020px;
-}
-
 #page
 {
-    width: 1000px;
-    margin: auto;
+    width: 100%;
     background-color: #FFFEE6;
 }
 
