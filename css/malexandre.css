@@ -1,7 +1,6 @@
 body
 {
     background: #222222;
-    width: 1000px;
     margin: auto;
     font-family: Verdana, helvetica, arial, clean, sans-serif;
 }
@@ -71,10 +70,21 @@ body
 }
 
 /* General */
+#wrapper
+{
+    background: url(/blog/img/bk_main_wrapper.png) repeat scroll 0 0 transparent;
+    margin: 30px auto 0;
+    overflow: hidden;
+    width: 1020px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #page
 {
-    width: 100%;
-    background-color: #FFFEE6;
+    width: 1000px;
+    margin: auto;
+    background-color: #FFFFFF;
 }
 
 /* Pagination */
@@ -115,10 +125,14 @@ body
 
 
 /* Home */
+.postHeader
+{
+}
+
 .categories
 {
     height: 14px;
-    margin-bottom: -15px;
+    margin-bottom: -25px;
     margin-top: 5px;
 }
 
@@ -170,7 +184,10 @@ body
 
 .postHome h3
 {
-    color: #444444;
+    margin-left: -70px;
+    padding: 20px;
+    background: #000;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -184,7 +201,7 @@ body
 
 .postHome h3 a
 {
-    color: #444444;
+    color: white;
     text-decoration: none;
 }
 
