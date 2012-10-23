@@ -2,7 +2,7 @@
 layout: master
 title: Home
 ---
-<div id="content">
+<div>
     {% for post in paginator.posts %}
         <div class="postHome">
             <div class="postHeader">
@@ -14,7 +14,7 @@ title: Home
                 <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                 <div class="postInfo">
                     <div class="comments"><a href="">X comments</a></div>
-                    <span class="homeDate">{{ post.date | date: "%d %B %Y, %H:%M:%S" }}</span>
+                    <span class="homeDate">{{ post.date | date: "%d %B %Y" }}</span>
                 </div>
             </div>
             <div class='contentHome'>
