@@ -2,15 +2,18 @@
 layout: master
 ---
 <div id="post">
-    <div id="date">
-        {{ page.date | date_to_long_string }}
+    <div class="postHeader">
+        <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+        <div class="postInfo">
+            <div class="comments">
+                <a href="{{ site.baseurl }}{{ page.url }}#disqus_thread">X comments</a>
+            </div>
+            <span class="homeDate">{{ page.date | date: "%d %B %Y" }}</span>
+        </div>
     </div>
-    <h2>
-        <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-    </h2>
     <div id="content">
         {{ content }}
-        <div id="postFooter">
+        <div class="postFooter">
             Posted at {{ page.date | date: "%H:%M:%S" }}.<br />
             Categories : <span class="categories"><a href="#">dev web</a>, <a href="#">git</a>, <a href="#">java</a></span>
         </div>

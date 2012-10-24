@@ -1,42 +1,9 @@
 body
 {
-    background: #F2F0EE;
+    background: #BEC3C6 url(/blog/img/bg.jpg) repeat-x;
     width: 1000px;
     margin: auto;
     font-family: Verdana, helvetica, arial, clean, sans-serif;
-}
-
-/* Menu */
-#title
-{
-    color: #318CE7 !important;
-    display: block;
-    float: left;
-    font-family: BenchNine;
-    font-size: 35px !important;
-    font-weight: bold !important;
-    height: 60px;
-    margin-left: 10px;
-    line-height: 60px;
-    text-align: left;
-    text-decoration: none;
-    background: transparent !important;
-}
-
-#subtitle
-{
-    float: right;
-    color: #999999;
-    font-size: 16px;
-    text-align: right;margin-right: 30px;
-    margin-top: -5px;
-}
-
-#author
-{
-    color: #419CF7;
-    font-size: 11px;
-    margin-top: -10px;
 }
 
 /* Footer */
@@ -58,7 +25,10 @@ body
 /* General */
 #page
 {
+    background: white url(/blog/img/main_shadow.gif) top repeat-x;
     width: 100%;
+    padding: 15px 0px;
+    margin-top: 50px;
 }
 
 /* Pagination */
@@ -98,59 +68,113 @@ body
 }
 
 /* Common */
-.postHome
-{
-    margin-bottom: 15px;
-    background: white;
-    border: 1px solid #DDD;
-    overflow: hidden;
-    padding: 20px;
-    margin-bottom: 40px;
-}
-
-.postHome h3, #post h2
+.postHome h2, #post h2
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: bold;
     text-transform: lowercase;
     color: #666666;
+    display: block;
+    margin-top: 10px;
+    border-bottom: 1px solid #CCC;
+    padding: 0 5px 3px;
 }
 
-.postHome h3:first-letter, #post h2:first-letter
+.postHome h2:first-letter, #post h2:first-letter
 {
     text-transform: uppercase;
 }
 
-.postHome h3 a, #post h2 a
+.postHome h2 a, #post h2 a
 {
     color: #666666;
     text-decoration: none;
 }
 
-.postHome h3 a:hover, #post h2 a:hover
+.postHome h2 a:hover, #post h2 a:hover
 {
-    color: #FF4B33;
+    color: #318CE7;
 }
 
 #content, .contentHome
 {
     text-align: left;
-    padding: 8px 50px;
     line-height: 19px;
+}
+
+.postInfo
+{
+    color: #464646;
+    margin-top: -22px;
+    margin-bottom: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 12px;
+}
+
+.comments
+{
+    float: right;
+    background: url(/blog/img/icons.gif) no-repeat;
+    background-position: 0 -96px;
+    padding-left: 22px;
+}
+
+.comments a
+{
+    color: #464646;
+    text-decoration: none;
+}
+
+.comments a:hover
+{
+    color: #318CE7;
+    text-decoration: underline;
+}
+
+.postFooter
+{
+    color: #464646;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: left;
+    font-style: italic;
+    margin-top: 25px;
+    margin-bottom: 45px;
 }
 
 
 /* Home */
+.postHome
+{
+    padding-bottom: 5px ;
+    overflow: hidden;
+    margin: 10px 15px;
+}
+
 .postHeader
 {
 }
 
 .categories
 {
-    height: 14px;
-    margin-bottom: -25px;
-    margin-top: 5px;
+    margin-top: 15px;
+}
+
+.categories i
+{
+    background: url(/blog/img/icons.gif) no-repeat;
+    background-position: 0 -480px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-indent: -999em;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    margin-left: 6px;
 }
 
 .categories a
@@ -169,35 +193,9 @@ body
     text-decoration: underline;
 }
 
-.postInfo
-{
-    color: #464646;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    border-bottom: 1px #CCC solid;
-}
-
-.comments
-{
-    float: right;
-    margin-right: 5px;
-}
-
-.comments a
-{
-    color: #464646;
-    text-decoration: none;
-}
-
-.comments a:hover
-{
-    color: #318CE7;
-    text-decoration: underline;
-}
-
 .contentHome
 {
+    margin-left: 7px;
     margin-bottom: 15px;
 }
 
@@ -211,7 +209,7 @@ body
 .readmore a
 {
     color: #318CE7;
-    padding: 6px 15px 6px 10px;
+    padding: 6px 15px 6px 6px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     text-transform: uppercase;
@@ -227,42 +225,22 @@ body
 /* Post */
 #post
 {
-    background: white;
-    border: 1px solid #DDD;
+    margin: 10px 15px;
+    margin-top: 20px;
+}
+
+#content
+{
+    margin-top: -16px;
+    margin-left: 7px;
+    padding-bottom: 5px ;
     overflow: hidden;
-    padding: 20px;
-}
-
-#post h2
-{
-    border-bottom: 1px #CCC solid;
-}
-
-#postFooter
-{
-    color: #464646;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    line-height: 14px;
-    text-align: left;
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 45px;
-}
-
-#date
-{
-    float: right;
-    text-align: right;
-    color: #333333;
-    font-size: 75%;
-    margin-top: 35px;
-    margin-right: 10px;
 }
 
 #disqus
 {
     background: #DEE6CF;
-    margin: -20px;
+    margin: -15px;
+    margin-bottom: -25px;
     padding: 15px;
 }
